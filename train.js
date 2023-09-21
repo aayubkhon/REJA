@@ -74,9 +74,13 @@ class Shop {
     }
   }
 }
-const shop = new Shop(2, 4, 5);
+const shop = new Shop(5, 4, 2);
 shop.maxSulotQoldigi();
-shop.maxSulotSotish("lagmon", 1);
+shop.maxSulotSotish('non',5)
 shop.maxSulotQoldigi();
-shop.maxSulotSotish("cola", 2);
+shop.maxSulotSotish('lagmon',2)
 shop.maxSulotQoldigi();
+
+
+
+
