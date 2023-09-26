@@ -9,7 +9,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
   if (err) {
     console.log("ERROR:", err);
   } else {
-    user = JSON.parse(data)
+    user = JSON.parse(data);
   }
 });
 
