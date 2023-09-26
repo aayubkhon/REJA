@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio</title>
+   <link rel="stylesheet" href="/main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <scrip src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+      integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+      </script>
+</head>
+
+<body>
+   <div class="container">
+      <div class="left_frame">
+         <img class="left_img" src="images/profile.png" alt="" />
+         <p class="portfolio_name">
+            <%=user.name%>
+         </p>
+         <p class="_portfolio_profession">
+            <%=user.profession%>
+         </p>
+         <div class="link_icons">
+            <a class="link" href="">
+               <img class="icons" src="icon/facebook.svg" alt="">
+            </a>
+            <a class="link" href="">
+               <img class=" icons" src="icon/instagram.svg" alt="">
+            </a>
+            <a class="link" href="">
+               <img class=" icons" src="icon/twitter.svg" alt="">
+            </a>
+            <a class="link" href="">
+               <img class=" icons" src="icon/linkeding.svg" alt="">
+            </a>
+            <a class="link" href="">
+               <img class=" icons" src="icon/youtube.svg" alt="">
+            </a>
+            <a class="link" href="">
+               <img class="icons_drible" src="icon/dribbble.svg" alt="">
+            </a>
+         </div>
+         <div class="scond_port">
+            <p class="border"></p>
+            <div class="portfolio">
+               <div class="flex">
+                  <p class="bg_color_age text_style">Age:</p>
+                  <p class="about_me">
+                     <%=user.age%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <p class="bg_color_res text_style">Residence:</p>
+                  <p class="about_me">
+                     <%=user.residence%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <p class="bg_color_fr text_style">Freelance:</p>
+                  <p class="about_me" id="active">
+                     <%=user.freelance%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <p class="bg_color_adr text_style">Adress:</p>
+                  <p class="about_me">
+                     <%=user.adress%>
+                  </p>
+               </div>
+            </div>
+            <p class="border"></p>
+            <div class="main_item">
+               <p class="h_color">Languages</p>
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.languages[0]%>
+                  </p>
+                  <p class="p_color">100%</p>
+               </div>
+               <img class="line" src="box_images/Line.png" alt="">
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.languages[1]%>
+                  </p>
+                  <p class="p_color">80%</p>
+               </div>
+               <img class="line" src="box_images/Linee.png" alt="">
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.languages[2]%>
+                  </p>
+                  <p class="p_color">60%</p>
+               </div>
+               <img class="line" src="box_images/Lineee.png" alt="">
+            </div>
+            <p class="border"></p>
+            <div class="main_item">
+               <p class="h_color">Skills</p>
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.skills[0]%>
+                  </p>
+                  <p class="p_color">90%</p>
+               </div>
+               <img class="line" src="box_images/Linee.png" alt="">
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.skills[1]%>
+                  </p>
+                  <p class="p_color">80%</p>
+               </div>
+               <img class="line" src="box_images/Lineee.png" alt="">
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.skills[2]%>
+                  </p>
+                  <p class="p_color">70%</p>
+               </div>
+               <img class="line" src="box_images/Linee.png" alt="">
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.skills[3]%>
+                  </p>
+                  <p class="p_color">80%</p>
+               </div>
+               <img class="line" src="box_images/Linee.png" alt="">
+            </div>
+            <p class="border"></p>
+            <div class="main_item">
+               <p class="h_color">Extra Skills</p>
+               <div class="flex">
+                  <img src="icon/res.png" alt="">
+                  <p class="p_color">
+                     <%=user.extra_skills[0]%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <img src="icon/res.png" alt="">
+                  <p class="p_color">
+                     <%=user.extra_skills[1]%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <img src="icon/res.png" alt="">
+                  <p class="p_color">
+                     <%=user.extra_skills[2]%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <img src="icon/res.png" alt="">
+                  <p class="p_color">
+                     <%=user.extra_skills[3]%>
+                  </p>
+               </div>
+               <div class="flex">
+                  <p class="p_color">
+                     <%=user.extra_skills[4]%>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="midd_frame">
+         <div class="main_midd">
+            <div class="midd_img">
+               <h1 class="midd_work">
+                  <%=user.work_place%>
+               </h1>
+               <p class="midd_service">
+                  <%=user.service_desc%>
+               </p>
+               <button class="btn">HIRE ME ⇢ </button>
+            </div>
+            <img class="img" src="images/midd_img.png" alt=""">
+         </div>
+        <div class=" service_sistem">
+            <div class="service">
+               <h1>My Services</h1>
+               <p class="ervice_text">
+                  <%=user.service_desc%>
+               </p>
+            </div>
+            <div class="wrapp_service">
+               <div class="service_items">
+                  <img src="icon/coding.svg" alt="">
+                  <p class="service_icon">Web development</p>
+                  <p class="service_icon_text">Blog, e-commerce</p>
+               </div>
+               <div class="service_items">
+                  <img src="icon/illustration.svg" alt="">
+                  <p class="service_icon">UI/uX design</p>
+                  <p class="service_icon_text">Mobile app, website design</p>
+               </div>
+               <div class="service_items">
+                  <img src="icon/Microphone.svg" alt="">
+                  <p class="service_icon">Sound design</p>
+                  <p class="service_icon_text">Voice Over, Beat Making</p>
+               </div>
+               <div class="service_items">
+                  <img src="icon/development.svg" alt="">
+                  <p class="service_icon">Game design</p>
+                  <p class="service_icon_text">Character Design, Props & Objects</p>
+               </div>
+               <div class="service_items">
+                  <img src="icon/photo.svg" alt="">
+                  <p class="service_icon">Photography</p>
+                  <p class="service_icon_text">portrait, product photography</p>
+               </div>
+               <div class="service_items">
+                  <p class="service_adverst">Advertising</p>
+                  <p class="adverst_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in
+                     ac dictum a urna viverra morbi. </p>
+                  <p class="order_active">ORDER NOW ></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="right_frame">
+         <img class="contrast_icon" src="icon/Contrast.svg" alt="">
+         <div class="right_icons">
+            <img src="icon/Pop.svg" alt="">
+            <img class="home_icon" src="icon/Home.svg" alt="">
+            <img class="right_icon" src="icon/Serv.svg" alt="">
+            <img class="right_icon" src="icon/Cv.svg" alt="">
+            <img class="right_icon" src="icon/Portfolio.svg" alt="">
+            <img class="right_icon" src="icon/Blog.svg" alt="">
+            <img class="right_icon" src="icon/Contactt.svg" alt="">
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

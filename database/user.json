@@ -1,0 +1,48 @@
+{
+  "name": "Leo",
+  "profession": "Software Engineer",
+  "age": 26,
+  "residence": "S.Korea",
+  "adress": "S.Korea,Daegu",
+  "freelance": "Available",
+  "languages": ["Uzbek", "Korean", "English"],
+  "skills": ["Html", "Css", "Js", "NodeJS", "React"],
+  "extra_skills": ["Materialize Styling", "TaiwindCss,Git Knowledge","Gulp, Webpack","Bootstrap, Materialize" ],
+  "work_place": "Software Engineer In South Korea",
+  "service_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.",
+  "about_me": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, tempore! Voluptatum architecto ea obcaecati quod velit!",
+  "city": "Gyongsan",
+  "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
+  "flower_desc": ["What is a Flower?", "What is a Seedling?"],
+  "flower_name": [
+    "Tulip",
+    "Daffodil",
+    "Poppy",
+    "Sunflower",
+    "Bluebell",
+    "Rose",
+    "Snowdrop",
+    "Cherry",
+    "blossom"
+  ],
+  "flower_price": [
+    "15$",
+    "25$",
+    "125",
+    "20$",
+    "35$",
+    "30$",
+    "225$",
+    "195$",
+    "10$"
+  ],
+  "famous_words": ["World is Beautiful with Flowers"],
+  "famous_name": ["Steve Jobs"]
+}
+
+
+
+
+
+
+
