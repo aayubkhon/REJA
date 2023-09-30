@@ -1,75 +1,10 @@
-console.log("Jack Ma maslaxatlari");
-const list = [
-  "yahshi talaba boling", // 0-2-
-  "togri boshliq tanlang va koproq hato qiling", //20-30
-  "uzingizga ishlashingizni boshlang", // 30-40
-  "siz kuchli bolgan narsalarni qiling", // 40-50
-  "yoshlarga investitsiya qiling", // 50-60
-  "endi dam oling, foydasi yok endi", //60
-];
+// 📌  E-TASK: E-Task: Shunday function tuzing, u bitta string argumentni qabul qilib osh stringni teskari qilib return qilsin
 
-// Task 9 callback Functions
-// function maslaxatBering(a, callback) {
-//   if (typeof a !== "number") callback("insert a number", null);
-//   else if (a <= 20) callback(null, list[0]);
-//   else if (a > 20 && a <= 30) callback(null, list[1]);
-//   else if (a > 30 && a <= 40) callback(null, list[2]);
-//   else if (a > 40 && a <= 50) callback(null, list[3]);
-//   else if (a > 50 && a <= 60) callback(null, list[4]);
-//   else {
-//     setInterval(function () {
-//       callback(null, list[5]);
-//     }, 1000);
-//   }
-// }
+// masalan: getReverse("hello") return qilsin "olleh"
 
-// console.log("passed here 0");
-// maslaxatBering(65, (err, data) => {
-//   if (err) console.log("ERROR", err);
-//   else {
-//     console.log("Javob:", data);
-//   }
-// });
-
-// console.log("passed here 1");
-
-// Task 10  async Functions
-async function maslaxatBering(a) {
-  if (typeof a !== "number") throw new Error("insert a number", null);
-  else if (a <= 20) return list[0];
-  else if (a > 20 && a <= 30) return list[1];
-  else if (a > 30 && a <= 40) return list[2];
-  else if (a > 40 && a <= 50) return list[3];
-  else if (a > 50 && a <= 60) return list[4];
-  else {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(list[5]);
-      }, 5000);
-    });
-  }
+function getReverse(smt) {
+  return smt.split("").reverse().join("");
 }
+console.log(getReverse("hello"));
 
-// sync functionlar toliq ishga tuship bolgach async functionlar ishga tusha boshlaydi va bizning single thread di band qilmedi
 
-// call via then/catch
-// console.log("passed here 0");
-// maslaxatBering(25)
-// .then(data =>{
-//   console.log("javob:",data);
-// }).catch(err =>{
-//   console.log("ERROR:",err);
-// })
-
-// console.log("passed here 1");
-// call async/await
-async function run() {
-  let javob = await maslaxatBering(25);
-  console.log(javob);
-  javob = await maslaxatBering(31);
-  console.log(javob);
-  javob = await maslaxatBering(61);
-  console.log(javob);
-}
-
-run();
