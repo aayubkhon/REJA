@@ -2,7 +2,6 @@ console.log("Web server is Started");
 const express = require("express");
 const app = express();
 
-
 const db = require("./server").db();
 
 // 1 kirish codelar
@@ -17,15 +16,38 @@ app.set("view engine", "ejs");
 
 // 4 Routing code
 // Post malumotni ozi bilan birga olip keladi va Date base ga yozadi
-app.post("/create-item", (req, res) => {});
+app.post("/create-item", (req, res) => {
+  console.log("user entered / create-item");
+  console.log(req.body);
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+    } else {
+      res.end("successfuly added");
+    }
+  });
+});
 
+// author page
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
 });
 
 // Date base dan malumot olish uchun get ishlatilinadi
 app.get("/", function (req, res) {
-  res.render("reja");
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        req.end("something went wrong");
+      } else {
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 module.exports = app;

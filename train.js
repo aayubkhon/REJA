@@ -2,9 +2,8 @@
 
 // masalan: getReverse("hello") return qilsin "olleh"
 
-function getReverse(smt) {
-  return smt.split("").reverse().join("");
-}
-console.log(getReverse("hello"));
-
+// function getReverse(smt) {
+//   return smt.split("").reverse().join("");
+// }
+// console.log(getReverse("hello"));
 
