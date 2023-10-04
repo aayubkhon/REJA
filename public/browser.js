@@ -29,3 +29,26 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       console.log("Plase do again");
     });
 });
+
+document.addEventListener("click", function (e) {
+  console.log(e.target);
+  // delete oper
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Anik ochirmokchimisz")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((respose) => {
+          console.log(respose.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Plase do again");
+        });
+    }
+  }
+});
+
+// edit oper
+document.addEventListener("click", function (e) {
+  // alert("asdsadas");
+});

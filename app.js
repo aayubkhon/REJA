@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // 1 kirish codelar
 app.use(express.static("public"));
@@ -21,8 +22,19 @@ app.post("/create-item", (req, res) => {
   console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    res.json(data.ops[0])
+    res.json(data.ops[0]);
   });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  console.log(id);
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "succses " });
+    }
+  );
 });
 
 // author page
