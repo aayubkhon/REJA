@@ -46,10 +46,7 @@ document.addEventListener("click", function (e) {
         });
     }
   }
-});
-
-// edit oper
-document.addEventListener("click", function (e) {
+  
   if (e.target.classList.contains("edit-me")) {
     let userInput = prompt(
       "Ozgartirish kiriting",
@@ -73,6 +70,8 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// edit oper
 
 document.getElementById("clean-all").addEventListener("click", function () {
   axios.post("/delete-all", { delete_all: true }).then((respose) => {
