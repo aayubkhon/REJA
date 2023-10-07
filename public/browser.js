@@ -50,7 +50,7 @@ document.addEventListener("click", function (e) {
   if (e.target.classList.contains("edit-me")) {
     let userInput = prompt(
       "Ozgartirish kiriting",
-      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+      e.target.parentElement.parentElement.querySelector("vaydod").innerHTML
     );
     if (userInput) {
       axios
